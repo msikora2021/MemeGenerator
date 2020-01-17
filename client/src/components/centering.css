@@ -1,0 +1,29 @@
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ } 
+.centered {
+    background-color: black;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding-top: 150px;
+    padding-right: 180px;
+    padding-bottom: 150px;
+    padding-left: 180px;
+    border-radius: 25px;
+    animation: fadeIn 5s;
+  }
+  .Upper-caption, .Upload-file, .Upload-image {
+      color:white;
+  }
+  .Upload-image {
+    
+  }
+  .WrappingDiv {
+
+  }
+
+

@@ -1,0 +1,21 @@
+@keyframes mymove {
+    from {margin-left: 0%;}
+    to {height: 35%;}
+  }
+.MemeStylingDiv {
+    border-style: solid;
+    border-radius: 25px;
+    background-color: salmon;
+    width: 30%;
+    margin-left: 35%;
+    position: relative;
+    animation: mymove 3s;
+}
+.image {
+    margin-left: 35%;
+}
+.tags {
+    border-style: solid;
+    background-color: gray;
+    border-radius: 25px;
+}

@@ -1,0 +1,9 @@
+.topnav {
+    margin-left: 40%;
+}
+.searchBar {
+    border-style: solid;
+    border-radius: 25px;
+    border-color: pink;
+    width: 40%;
+}

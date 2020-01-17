@@ -1,0 +1,60 @@
+@keyframes mymove {
+    from {height: 0px;}
+    to {height: 338px;}
+  }
+.vertical {
+    border-left: 1px solid black;
+    height: 600px;
+    position:absolute;
+    left: 50%;
+    margin-top: -200px;
+}
+.canvaspics {
+    margin-left: 30%;
+}
+.canvasform {
+    margin-left: 15%;
+}
+.leftsidep {
+    width: 50%;
+    margin-left: 30%;
+}
+.canvasWrappingDivLeft{
+    background-color: red;
+    border-style: solid;
+    width: 40%;
+    border-radius: 25px;
+    position: relative;
+    animation: mymove 5s;
+}
+.LeftSideCanvas {
+    margin-left: 30%;
+}
+.tagform {
+    margin-left: 20%;
+    margin-top: 8px;
+}
+.submitButton {
+    border-style: solid;
+    border-radius: 25px;
+    background-color: blue;
+    color: white;
+}
+.leftsidesubmit {
+    border-style: solid;
+    border-radius: 25px;
+    position: relative;
+    left: 55px;
+    background-color: blue;
+    color: white;
+}
+.RightSideDiv{
+    float:right;
+    border-style: solid;
+    margin-top: -295px;
+    margin-right: 100px;
+    width: 20%;
+    height: 325px;
+    background-color: salmon;
+    border-radius: 25px;
+}
