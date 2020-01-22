@@ -34,23 +34,23 @@ export default class MemeGenerator extends Component {
 
     handleChange(event) {
         this.setState({showdiv: false});
-        var url1 = URL.createObjectURL(event.target.files[0]);
+        let url1 = URL.createObjectURL(event.target.files[0]);
         this.setState({imagefile: url1});
         const that = this;
-        var makeblob = function (dataURL) {
-            var BASE64_MARKER = ';base64,';
+        let makeblob = function (dataURL) {
+            let BASE64_MARKER = ';base64,';
             if (dataURL.indexOf(BASE64_MARKER) == -1) {
-                var parts = dataURL.split(',');
-                var contentType = parts[0].split(':')[1];
-                var raw = decodeURIComponent(parts[1]);
+                let parts = dataURL.split(',');
+                let contentType = parts[0].split(':')[1];
+                let raw = decodeURIComponent(parts[1]);
                 return new Blob([raw], {type: contentType});
             }
-            var parts = dataURL.split(BASE64_MARKER);
-            var contentType = parts[0].split(':')[1];
-            var raw = window.atob(parts[1]);
-            var rawLength = raw.length;
+            let parts = dataURL.split(BASE64_MARKER);
+            let contentType = parts[0].split(':')[1];
+            let raw = window.atob(parts[1]);
+            let rawLength = raw.length;
 
-            var uInt8Array = new Uint8Array(rawLength);
+            let uInt8Array = new Uint8Array(rawLength);
 
             for (var i = 0; i < rawLength; ++i) {
                 uInt8Array[i] = raw.charCodeAt(i);
@@ -58,10 +58,10 @@ export default class MemeGenerator extends Component {
 
             return new Blob([uInt8Array], {type: contentType});
         };
-        var file = event.target.files[0];
-        var reader = new FileReader();
+        let file = event.target.files[0];
+        let reader = new FileReader();
         reader.onload = function (event) {
-            var contents = reader.result;
+            let contents = reader.result;
             fetch("https://eastus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=emotion&recognitionModel=recognition_01&returnRecognitionModel=false&detectionModel=detection_01"
                 , {
                     method: 'post',
@@ -92,7 +92,7 @@ export default class MemeGenerator extends Component {
 
     render() {
 
-        var newlist = this.state.facesArray.map((face, i) => {
+        let newlist = this.state.facesArray.map((face, i) => {
             return <Canvascompo faces={face} originalimage={this.state.imagefile} ivalue={i} key={i}/>
 
         });
