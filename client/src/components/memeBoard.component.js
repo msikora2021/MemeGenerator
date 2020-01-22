@@ -54,7 +54,7 @@ export default class MemeBoard extends Component {
 
 
     render() {
-        var list = this.state.memeArray.map((meme, index) => {
+        let list = this.state.memeArray.map((meme, index) => {
             return <Meme image={this.state.memeArray[index].imagestring} tags={this.state.memeArray[index].tags} caption={this.state.memeArray[index].caption}/>;
         });
         return (
