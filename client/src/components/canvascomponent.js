@@ -67,7 +67,7 @@ export default class Canvascompo extends React.Component {
     }
     updateCanvas() {
         const x = this.myRef.current.getContext('2d');
-        var imageObj1 = new Image();
+        let imageObj1 = new Image();
         imageObj1.src = this.props.originalimage;
         const that = this;
         imageObj1.onload = function() {
@@ -78,7 +78,7 @@ export default class Canvascompo extends React.Component {
     }
     updateCanvas2() {
         const x = this.secondmyRef.current.getContext('2d');
-        var imageObj1 = new Image();
+        let imageObj1 = new Image();
         imageObj1.src = this.props.originalimage;
         const that = this;
         imageObj1.onload = function() {
@@ -90,14 +90,14 @@ export default class Canvascompo extends React.Component {
     }
     convertfirstcanvastoimage() {
         const canvas  = this.myRef.current;
-        var image = new Image();
+        let image = new Image();
         image.src = canvas.toDataURL("image/png");
         return image;
     }
 
     convertsecondcanvastoimage() {
         const canvas = this.secondmyRef.current;
-        var image = new Image();
+        let image = new Image();
         image.src = canvas.toDataURL("image/png");
         return image;
     }
@@ -108,7 +108,7 @@ export default class Canvascompo extends React.Component {
         const leftcaption = this.pref.current.innerHTML;
         //console.log(leftcaption);
         //console.log(trimmedURl);
-        var leftsidestate = this.state.leftsidestate;
+        let leftsidestate = this.state.leftsidestate;
         leftsidestate.imgstring = trimmedURl;
         leftsidestate.leftsidecaption = leftcaption;
         this.setState({ leftsidestate: leftsidestate
@@ -137,16 +137,16 @@ export default class Canvascompo extends React.Component {
         }); */
     }
     leftsidehandlechange(event) {
-        var enteredTagString = event.target.value;
-        var tagArray = enteredTagString.split(" ");
-        var leftsidestate = this.state.leftsidestate;
+        let enteredTagString = event.target.value;
+        let tagArray = enteredTagString.split(" ");
+        let leftsidestate = this.state.leftsidestate;
         leftsidestate.leftsidetags = tagArray;
         this.setState({leftsidetags: leftsidestate});
     }
     rightsideTAGhandlechange(event) {
-        var enteredTagString = event.target.value;
-        var tagArray = enteredTagString.split(" ");
-        var rightsidestate = this.state.rightsidestate;
+        let enteredTagString = event.target.value;
+        let tagArray = enteredTagString.split(" ");
+        let rightsidestate = this.state.rightsidestate;
         rightsidestate.rightsidetags = tagArray;
         this.setState({rightsidetags: rightsidestate});
     }
