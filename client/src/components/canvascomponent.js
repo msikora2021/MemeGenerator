@@ -151,8 +151,8 @@ export default class Canvascompo extends React.Component {
         this.setState({rightsidetags: rightsidestate});
     }
     rightsideCAPhandlechange(event) {
-        var caption = event.target.value;
-        var rightsidestate = this.state.rightsidestate;
+        let caption = event.target.value;
+        let rightsidestate = this.state.rightsidestate;
         rightsidestate.rightsidecaption = caption;
         this.setState({rightsidestate: rightsidestate});
     }
@@ -160,7 +160,7 @@ export default class Canvascompo extends React.Component {
         const canvas = this.secondmyRef.current;
         const imgUrl = canvas.toDataURL();
         const trimmedURl = imgUrl.split(",")[1];
-        var rightsidestate = this.state.rightsidestate;
+        let rightsidestate = this.state.rightsidestate;
         rightsidestate.imgstring = trimmedURl;
 
         this.setState({ rightsidestate: rightsidestate
