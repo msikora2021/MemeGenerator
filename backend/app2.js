@@ -49,7 +49,6 @@ app.post('/search', (req,res) => {
     });
 });
 app.get('/memeboard',  (req, res) => {
-    //console.log("Ok so like im reached");
     meme.Meme.find({}).sort('-date').exec(function(err, docs) {
         if(err) {
             console.log(err);
