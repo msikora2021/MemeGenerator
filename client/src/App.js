@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MemeGenerator from "./components/meme-gen.component";
 import MemeBoard from "./components/memeBoard.component";
-import LoginCompo from "./components/logincomponent";
-import RegisterCompo from "./components/registercomponent";
 import './App.css'
 
 class App extends Component {
